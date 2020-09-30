@@ -35,9 +35,12 @@ class CalculadoraController{
             case "soma":
                 this.adicionarOperacao('+');
                 break;
+            case "subtracao":
+                this.adicionarOperacao("-")
+                break;
             case "igual": 
                 this.calcular()
-            break;
+                break;
         }   
         console.log(this.listaComandos);
     }
