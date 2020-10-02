@@ -8,7 +8,9 @@ class CalculadoraController{
         this._display = document.querySelector("#display");
 
 
-        this.initButtons();       
+        this.initButtons();    
+        
+        
     }
     //inicializar botões
     initButtons(){
@@ -29,6 +31,7 @@ class CalculadoraController{
 
     selecionaButton(nomeBotao){
         switch(nomeBotao){
+            case "0":
             case "1":
                 this.adicionarNumero(nomeBotao);
                 break;
@@ -46,6 +49,8 @@ class CalculadoraController{
     }
 
     calcular(){
+      
+
         //transforma lista em String
         let expressao = this.listaComandos.join("")
         let result = eval(expressao);

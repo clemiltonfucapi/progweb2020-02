@@ -1,0 +1,23 @@
+
+
+
+
+# 5
+calcular(){
+    if( PORC == VERDADEIRO){
+        ## COMANDOS
+            - calcular a porcentagem
+            - Mostrar no display
+            - Atualizar Lista de comandos
+    }else{
+        CÓDIGO ATUAL  
+    }
+}
+
+## 8
+adicionarZero(){
+    if(FOR UM número)
+        adicionarNumero(0)
+    else
+        SETAR display em zero
+}
