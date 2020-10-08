@@ -347,7 +347,7 @@ desired effect
           <div class="col-md-6">
             <div class="small-box bg-green">
               <div class="inner">
-                <h3>10</h3>
+                <h3 id="qtd-usuarios">0</h3>
                 <p>Usuários</p>
               </div>
               <div class="icon">
@@ -359,7 +359,7 @@ desired effect
           <div class="col-md-6">
             <div class="small-box bg-yellow">
               <div class="inner">
-                <h3>0</h3>
+                <h3 id="qtd-admins">0</h3>
   
                 <p>Administradores</p>
               </div>
@@ -553,6 +553,9 @@ desired effect
      Both of these plugins are recommended to enhance the
      user experience. -->
     
-     <script type="module" src="index.js"></script>
+    <script src="classes/Utils.js"></script>
+     <script src="model/User.js"></script>
+     <script src="controller/UserController.js"></script>
+     <script src="starter.js"></script>
 </body>
 </html>

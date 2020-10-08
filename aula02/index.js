@@ -8,7 +8,6 @@ input.addEventListener('change',e =>{
             let img = new Image();
             img.src = reader.result;
             document.body.appendChild(img)
-        
         }
     reader.readAsDataURL(input.files[0])
 

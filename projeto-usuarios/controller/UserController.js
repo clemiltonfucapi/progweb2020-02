@@ -5,24 +5,53 @@ class UserController{
         this.inputs = inputs;
         this.table = table;
         this.onSubmit();
+        this.onChangePhoto();
     }
+    onChangePhoto(){
+        let inputFoto = this.form.querySelector("[type=file]");
+        inputFoto.addEventListener('change',(event)=> {
+            console.log(inputFoto.files[0]);
+            let reader = new FileReader();
+            reader.readAsDataURL(inputFoto.files[0]);
+            reader.onload = function(){
+                inputFoto.src = reader.result;
+            }
+
+        })
+    }
+
     onSubmit(){
         this.form.addEventListener("submit", (event) => {
             event.preventDefault();
             let user = this.getValues();
             this.addLine(user);
+            this.resetForm();
+            // pegar os valores atuais -> querySelector
+
+            //Adiciono +1 em usuarios
+            if(user.admin){
+                //Adicionar +1 em administradores
+            }
+            //Atualizar os valores
+
+            
         })
     }  
+
+    resetForm(){
+        this.form.reset();
+        this.form.querySelector("[type=file]").removeAttribute("src")
+    }
     addLine(user){
         let tr = document.createElement("tr");
         tr.innerHTML = `
             <td> 
-                <img src="dist/img/avatar.png" class="img-circle img-sm" alt="Imagem do Usuário">
+                <img src="${  user.foto!="" ? user.foto : 'dist/img/avatar.png'}" class="img-circle img-sm" alt="Imagem do Usuário">
             </td>  
             <td>${user.nome}</td>
             <td>${user.email}</td>
             <td>${user.admin}</td>
-            <td>${user.nascimento}</td>
+            <td>${ Utils.dateFormat(user.nascimento)}</td>
             <td>
                 <button type="button" class="btn btn-primary btn-edit btn-xs btn-flat"  >Editar</button>
                 <button type="button" class="btn btn-danger btn-delete btn-xs btn-flat">Excluir</button>
@@ -38,6 +67,10 @@ class UserController{
                 return;
             if(input.type=="checkbox"){
                 user[input.name] = input.checked;
+                return;
+            }
+            if(input.type=="file"){
+                user[input.name] = input.src;
                 return;
             }
             user[input.name] = input.value;
