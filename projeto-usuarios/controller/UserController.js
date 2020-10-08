@@ -26,17 +26,16 @@ class UserController{
             let user = this.getValues();
             this.addLine(user);
             this.resetForm();
-            // pegar os valores atuais -> querySelector
-
-            //Adiciono +1 em usuarios
-            if(user.admin){
-                //Adicionar +1 em administradores
-            }
-            //Atualizar os valores
-
-            
+            this.atualizaDisplay(user);
         })
     }  
+
+    atualizaDisplay(user){
+        this.qtdUsuarios = this.qtdUsuarios+1;
+        if(user.admin){
+            this.qtdAdmins = this.qtdAdmins +1;
+        }
+    }
 
     resetForm(){
         this.form.reset();
@@ -81,4 +80,18 @@ class UserController{
                     user.foto,user.admin);
 
     }
+   
+    get qtdUsuarios(){
+        return document.querySelector("#qtd-usuarios").innerHTML;       
+    }
+    set qtdUsuarios(value){
+        document.querySelector("#qtd-usuarios").innerHTML = value;
+    }
+    get qtdAdmins(){
+        return document.querySelector("#qtd-admins").innerHTML;
+    }
+    set qtdAdmins(value){
+        document.querySelector("#qtd-admins").innerHTML = value;
+    }
+
 }
