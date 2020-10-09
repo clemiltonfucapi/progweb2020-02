@@ -6,6 +6,14 @@ class UserController{
         this.table = table;
         this.onSubmit();
         this.onChangePhoto();
+        this.onEdit();
+    }
+    onEdit(){
+        let btnCancel = document.querySelector("#btn-edit-cancel");
+        btnCancel.addEventListener("click", e =>{
+            document.querySelector("#box-user-create").style.display="block";  
+            document.querySelector("#box-user-edit").style.display="none";
+        })
     }
     onChangePhoto(){
         let inputFoto = this.form.querySelector("[type=file]");
@@ -31,9 +39,9 @@ class UserController{
     }  
 
     atualizaDisplay(user){
-        this.qtdUsuarios = this.qtdUsuarios+1;
+        this.qtdUsuarios = parseInt(this.qtdUsuarios)+1;
         if(user.admin){
-            this.qtdAdmins = this.qtdAdmins +1;
+            this.qtdAdmins = parseInt(this.qtdAdmins) +1;
         }
     }
 
@@ -56,6 +64,21 @@ class UserController{
                 <button type="button" class="btn btn-danger btn-delete btn-xs btn-flat">Excluir</button>
             </td>
             `
+        tr.querySelector(".btn-edit").addEventListener("click", e => {
+            let form = document.querySelector("#form-editar-usuarios")
+            let atributo;
+            for(atributo in user){
+                let input = form.querySelector(`[name=${atributo}]`);
+                input.value = user[atributo];
+            }
+
+  
+            
+            //1 º REMOVER O FORMULARIO DE CADASTRO
+            document.querySelector("#box-user-create").style.display = "none"
+            document.querySelector("#box-user-edit").style.display="block";
+            //2º MOSTRAR O FORMULARIO DE EDIT
+        })
         this.table.appendChild(tr);
     }
     //retorna um usuário
