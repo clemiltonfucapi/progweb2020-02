@@ -1,0 +1,5 @@
+1 - Iniciar um projeto nodejs
+2 - Instalar o express
+3 - Fazer as rotas
+    - /clientes
+    - /produtos
