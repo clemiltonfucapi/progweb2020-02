@@ -1,0 +1,25 @@
+{
+    "noticias":[
+        {
+            "titulo":"Primeira Noticia",
+            "noticia": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida mauris vitae leo accumsan, in dignissim purus mollis. Fusce et ipsum et purus vehicula congue. Proin vitae dui velit. Duis velit risus, luctus eget blandit id, mattis at diam. Nunc semper ullamcorper lacus a maximus. Curabitur ut turpis auctor, mollis tortor id, malesuada ligula. Nulla at lacus turpis. Nullam magna dolor, pulvinar id ultrices id, tincidunt non urna."
+        },
+        {
+            "titulo": "Segunda Noticia",
+            "noticia":"Sed semper sem vitae neque vulputate pellentesque. Nulla suscipit eget nulla eget convallis. Fusce nec augue semper, pulvinar nunc ut, commodo purus. Donec ultrices eleifend sapien bibendum sodales. Vestibulum pretium cursus fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ut malesuada elit, placerat pretium orci. Etiam aliquet diam vel laoreet egestas. Aliquam nec felis ac erat sollicitudin malesuada varius sit amet nunc. Aenean interdum dapibus sagittis. Aliquam quam nibh, gravida ut mi et, pretium elementum augue. Integer non risus suscipit, tempus massa in, venenatis felis."
+        },
+        {
+            "titulo": "Terceira Noticia",
+            "noticia": "Proin vitae dui velit. Duis velit risus, luctus eget blandit id, mattis at diam. Nunc semper ullamcorper lacus a maximus. Curabitur ut turpis auctor, mollis tortor id, malesuada ligula. Nulla at lacus turpis. Nullam magna dolor, pulvinar id ultrices id, tincidunt non urna."
+        },
+        {
+            "titulo":"Quarta noticia",
+            "noticia":"Boa noite!!"
+        },
+        {
+            "titulo":"Quinta noticia",
+            "noticia": "Curabitur metus lectus, suscipit a lectus et, euismod varius sapien. Donec non ullamcorper purus. Nullam dapibus mi eget magna luctus consequat in eget diam. Ut mollis imperdiet nulla eu congue. "
+        }
+
+    ]
+}
