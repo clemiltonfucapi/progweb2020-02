@@ -23,8 +23,6 @@ let server = http.createServer((req,res) =>{
                 nome: "Clemilton",
                 email: "clemilton.ufam@gmail.com"
              } 
-
-
             res.end(   JSON.stringify( user));
     }
 
