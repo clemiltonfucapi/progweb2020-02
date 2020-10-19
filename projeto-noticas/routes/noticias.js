@@ -5,5 +5,11 @@ module.exports = function(app){
         app.controllers.noticias.index(app,req,res);
     })
 
-    
+    app.get('/adicionar-noticia',(req,res) => {
+        app.controllers.noticias.addRender(app,req,res);
+    })
+
+    app.post('/adicionar-noticia',(req,res) => {
+        app.controllers.noticias.add(app,req,res);
+    })
 }

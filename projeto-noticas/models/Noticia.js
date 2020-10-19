@@ -1,7 +1,10 @@
 var fs = require('fs')
 
-function Noticia(name){
-    this.name = name;
+function Noticia(body){
+    if(body){
+        this.titulo = body.titulo;
+        this.noticia = body.noticia
+    }
 }
 
 Noticia.prototype.getNoticias = (callback)=>{
@@ -18,6 +21,29 @@ Noticia.prototype.getNoticias = (callback)=>{
         }
 
     });
+}
+Noticia.prototype.addNoticia = function(callback){
+    var noticia = {
+        titulo: this.titulo,
+        noticia: this.noticia
+    };
+    fs.readFile('./data/noticias.json',(err,result)=>{
+
+        if(!err){
+            var obj = JSON.parse(result)
+            obj.noticias.push(noticia);
+            console.log(obj)
+            let str = JSON.stringify(obj);
+            fs.writeFile('./data/noticias.json', str, (err) =>{
+                if(err)
+                    throw err
+                console.log("Arquivo atualizado!")
+                callback();
+            })
+            
+        }
+    })
+
 }
 
 module.exports = ()=>{

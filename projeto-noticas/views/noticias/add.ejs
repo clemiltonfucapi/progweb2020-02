@@ -11,24 +11,26 @@
     
     <div class="container">
         <br/><br/><br/>
-        <h2> Exemplo MVC</h2>
+        <h2> Adicionar Noticia</h2>
         <br/>
-        <div class="row">
-            <a  href="/adicionar-noticia" class="btn btn-success mb-4"> Adicionar Noticia</a>
-        </div>
+    
+        <div class="row">    
+            <div class="col-md-12 jumbotron">
+                <form action="/adicionar-noticia" method="POST" >
+                    <div class="form-group">
+                      <label for="titulo">Título</label>
+                      <input type="text" required class="form-control" id="titulo" name="titulo">
+                    </div>
 
-        <% if(noticias.length > 0 ) { %>
-            <div class="row">
-                <% for(let i =0 ; i < noticias.length; i++) { %>
-                <div class="col-md-12 jumbotron">
-                    <h4> <%= noticias[i].titulo %></h4>
-                    <p> <%= noticias[i].noticia %></p>
-                </div>
-                <% } %>
-
-        
+                    <div class="form-group">
+                        <label for="titulo">Corpo</label>
+                        <textarea class="form-control" id="corpo" rows="3" name="noticia"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>     
             </div>
-        <% } %>
+            
+        </div>
     </div>
 
 

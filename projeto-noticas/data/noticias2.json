@@ -29,12 +29,7 @@
             "id": 6,
             "titulo":"Sexta Noticia",
             "noticia": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida mauris vitae leo accumsan, in dignissim purus mollis. Fusce et ipsum et purus vehicula congue. Proin vitae dui velit. Duis velit risus, luctus eget blandit id, mattis at diam. Nunc semper ullamcorper lacus a maximus. Curabitur ut turpis auctor, mollis tortor id, malesuada ligula. Nulla at lacus turpis. Nullam magna dolor, pulvinar id ultrices id, tincidunt non urna."
-        },
-        {
-            "id": 7,
-            "titulo": "Setima noticia",
-            "noticia": "fg15341fdf  r 2r rfafdsfcsd"
-
         }
+
     ]
 }
